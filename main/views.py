@@ -45,7 +45,7 @@ def home(request):
         stats = {
             'total_jobs': total_jobs_count,
             'companies': unique_companies,
-            'job_seekers': '10000+'  
+            'job_seekers': '1000+'  
         }
         
         context = {
