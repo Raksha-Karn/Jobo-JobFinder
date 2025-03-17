@@ -1,0 +1,193 @@
+{% extends 'base.html' %} {% block content %}
+<div class="font-poppins">
+  <div class="bg-orange-50 py-16 md:py-24">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1
+            class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 font-inter"
+          >
+            Find Your Dream Job with
+            <span class="text-orange-500">JobsFinder</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Discover thousands of job opportunities from top companies
+            worldwide. Your next career move starts here.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="{% url 'jobs' %}"
+              class="inline-flex justify-center items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-none hover:bg-orange-600 transition-all text-lg"
+            >
+              Browse Jobs
+            </a>
+            <a
+              href="#how-it-works"
+              class="inline-flex justify-center items-center px-8 py-4 border-2 border-orange-200 text-gray-700 font-semibold rounded-none hover:bg-orange-50 transition-all text-lg"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img
+            src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+            alt="Professional office environment"
+            class="w-full h-[400px] object-cover rounded-none shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 border-2 border-orange-200 rounded-none">
+          <div class="text-4xl font-bold text-orange-500 mb-2">
+            {{ stats.total_jobs }}
+          </div>
+          <div class="text-gray-600">Active Job Listings</div>
+        </div>
+        <div class="text-center p-6 border-2 border-orange-200 rounded-none">
+          <div class="text-4xl font-bold text-orange-500 mb-2">
+            {{ stats.companies }}
+          </div>
+          <div class="text-gray-600">Companies</div>
+        </div>
+        <div class="text-center p-6 border-2 border-orange-200 rounded-none">
+          <div class="text-4xl font-bold text-orange-500 mb-2">
+            {{ stats.job_seekers }}
+          </div>
+          <div class="text-gray-600">Job Seekers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="how-it-works" class="py-16 bg-orange-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <h2 class="text-4xl font-bold text-center mb-12 font-inter">
+        How JobsFinder Works
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-none border-2 border-orange-200">
+          <div
+            class="w-12 h-12 bg-orange-500 rounded-none flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 font-inter">Search Jobs</h3>
+          <p class="text-gray-600">
+            Browse through thousands of job listings using our advanced search
+            and filtering system.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-none border-2 border-orange-200">
+          <div
+            class="w-12 h-12 bg-orange-500 rounded-none flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 font-inter">Apply Easily</h3>
+          <p class="text-gray-600">
+            Direct application process with just a few clicks. No complicated
+            forms or sign-ups required.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-none border-2 border-orange-200">
+          <div
+            class="w-12 h-12 bg-orange-500 rounded-none flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4 font-inter">Get Hired</h3>
+          <p class="text-gray-600">
+            Connect directly with employers and start your journey towards your
+            dream career.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <h2 class="text-4xl font-bold text-center mb-12 font-inter">
+        Popular Job Categories
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        {% for category in categories %}
+        <a
+          href="{% url 'jobs' %}?search={{ category.name }}"
+          class="group p-6 border-2 border-orange-200 rounded-none hover:bg-orange-50 transition-all"
+        >
+          <h3
+            class="text-xl font-bold mb-2 text-gray-800 group-hover:text-orange-500 transition-all font-inter"
+          >
+            {{ category.name }}
+          </h3>
+          <p class="text-gray-600">{{ category.count }} open positions</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-orange-500 py-16">
+    <div class="container mx-auto px-4 max-w-7xl text-center">
+      <h2 class="text-4xl font-bold text-white mb-6 font-inter">
+        Ready to Find Your Next Job?
+      </h2>
+      <p class="text-xl text-white/90 mb-8">
+        Join thousands of job seekers who have found their perfect role through
+        JobsFinder
+      </p>
+      <a
+        href="{% url 'jobs' %}"
+        class="inline-flex justify-center items-center px-8 py-4 bg-white text-orange-500 font-semibold rounded-none hover:bg-orange-50 transition-all text-lg"
+      >
+        Start Your Job Search
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
