@@ -41,8 +41,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/job-finder.git
-   cd job-finder
+   git clone git@github.com:Raksha-Karn/Jobo-JobFinder.git
+   cd linkedin_jobs
    ```
 
 2. **Create and activate a virtual environment:**
