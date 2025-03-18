@@ -41,7 +41,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone git@github.com:Raksha-Karn/Jobo-JobFinder.git
+   git clone https://github.com/Raksha-Karn/Jobo-JobFinder.git
    cd linkedin_jobs
    ```
 
